@@ -29,7 +29,16 @@ The dataset used for the analysis is derived from the [alexandria3k package](htt
 
 The particular dataset used comprises part of the publications graph for a 1% sample of all CrossRef available publications that have abstracts. The CD index of each paper is contained in the dataset. 
 
-
 ## Different Approaches
+
+1. **Descriptive Statistics in a ML model**
+- The metrics which can arise from the paper itself and its citations are leveraged
+- Indicative features : number of authors, number of subjects, number of references etc.
+
+2. **NLP Approach**
+- The title and abstract of each publication are used to extract features by applying NLP techniques
+- The features extracted are combined with the initial metrics into a single model
+- Indicative features : number of words, number of sentences, number of unique words, density ratio etc.
+
 
 ## Limitations
