@@ -4,4 +4,4 @@ A [recent paper in Nature](https://www.nature.com/articles/s41586-022-05543-x) c
 
 The core aim of this project is to investigate the validity of this claim by attempting to create a Machine Learning model that can ***predict, as accurately as possible, the disruptiveness of a scientific paper.***
 
-The analysis conducted is a part of an assignment of the course Applied Machine Learning at the Department of Management Science and Technology in the Athens University of Economics and Business (AUEB) by professor [Panos Louridas](https://github.com/louridas). 
+The analysis conducted is a part of an [assignment](/disruptive_science_assignment.ipynb) of the course Applied Machine Learning at the Department of Management Science and Technology in the Athens University of Economics and Business (AUEB) by professor [Panos Louridas](https://github.com/louridas). 
