@@ -40,5 +40,11 @@ The particular dataset used comprises part of the publications graph for a 1% sa
 - The features extracted are combined with the initial metrics into a single model
 - Indicative features : number of words, number of sentences, number of unique words, density ratio etc.
 
+## Results Evaluation
 
 ## Limitations
+
+- The sample used - 1% of total publications graph - might lead to biased metrics and models
+- Using a more complete dataset is not computationally feasible. However, it might lead to more accurate predictions
+- The models proposed might not perform well when tested on the complete publications graph as they have been tweaked to fit on current data
+- The heavily imbalanced dataset has lead to models which are accurate in predicting target values which are sufficiently represented in the training set
