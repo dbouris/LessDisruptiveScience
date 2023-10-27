@@ -41,8 +41,8 @@ The particular dataset used comprises part of the publications graph for a 1% sa
 - Indicative features : number of words, number of sentences, number of unique words, density ratio etc.
 - Word Embeddings from a pretrained model are also used to extract features from the title and abstract of each publication
 
-3. **Classification Approach**
-At last, since the dataset is highly imbalanced and contains a significant number of papers with 0 or 1 cd5 index, the the CD index is transformed into a binary variable and the problem is turned into a classification one.
+3. **Classification Approach** <br>
+At last, since the dataset is highly imbalanced and contains a significant number of papers with 0 or 1 cd5 index, the the CD index is transformed into a binary variable and the problem is turned into classification.
 
 The in depth analysis and the results can be found in the [Solution](/cd5_prediction_solution.ipynb) notebook.
 
