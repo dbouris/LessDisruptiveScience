@@ -39,8 +39,44 @@ The particular dataset used comprises part of the publications graph for a 1% sa
 - The title and abstract of each publication are used to extract features by applying NLP techniques
 - The features extracted are combined with the initial metrics into a single model
 - Indicative features : number of words, number of sentences, number of unique words, density ratio etc.
+- Word Embeddings from a pretrained model are also used to extract features from the title and abstract of each publication
+
+3. **Classification Approach**
+At last, since the dataset is highly imbalanced and contains a significant number of papers with 0 or 1 cd5 index, the the CD index is transformed into a binary variable and the problem is turned into a classification one.
+
 
 ## Results Evaluation
+
+- The models are evaluated using the Mean Absolute Error (MAE), Mean Squared Error (MSE) and the R2 Score
+- Overall, the models have similar performance in terms of predicting the CD5 index
+- In this case, the feature extraction using NLP techniques does not seem to improve the performance of the models
+- The models perform better when the CD5 index is transformed into a binary variable, since the dataset is highly imbalanced and balancing techniques were ineffective
+
+The best performing model was the Neural Network with the architecture below:
+
+```
+nn = keras.Sequential([
+        normalizer,
+        layers.Dense(64, activation='relu'),
+        layers.Dense(64, activation='relu'),
+        layers.Dense(1)
+    ])
+```
+
+The metric `mean_squared_error` was used as the loss function and the `Adam` optimizer was used with a learning rate of `0.001`. The NN is trained for 100 epochs with a batch size of 32. During each epoch, 20% of the data is used for validation.
+
+***Features used:***
+
+- number of subjects of the publication
+- number of cited papers by the publication
+- number of authors of the publication
+- mean age of the papers cited by the publication 
+- standard deviation of the publication year of the papers cited by each publication 
+
+***Results***
+- MSE: 0.00841
+- R2 (Test): 0.96
+
 
 ## Limitations
 
