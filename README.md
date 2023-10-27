@@ -44,6 +44,7 @@ The particular dataset used comprises part of the publications graph for a 1% sa
 3. **Classification Approach**
 At last, since the dataset is highly imbalanced and contains a significant number of papers with 0 or 1 cd5 index, the the CD index is transformed into a binary variable and the problem is turned into a classification one.
 
+The in depth analysis and the results can be found in the [Solution](/cd5_prediction_solution.ipynb) notebook.
 
 ## Results Evaluation
 
